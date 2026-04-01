@@ -1,10 +1,3 @@
-"""
-app.py — Flask Web Application for Plant Disease Detection
-==========================================================
-Run: python app.py
-Then open your browser at: http://127.0.0.1:5000
-"""
-
 import os
 import json
 import numpy as np
