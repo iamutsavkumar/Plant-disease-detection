@@ -1,10 +1,3 @@
-"""
-predict.py
-==========
-Use this script to predict the disease class of any new tomato leaf image.
-Run from terminal: python predict.py --image path/to/leaf.jpg
-"""
-
 import os
 import sys
 import json
