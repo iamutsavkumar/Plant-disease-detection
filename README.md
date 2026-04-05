@@ -3,6 +3,10 @@
 An AI-powered web application that detects plant leaf diseases using a Convolutional Neural Network (CNN). The system allows users to upload leaf images and get instant predictions with confidence scores.
 
 ---
+## 📸 UI Preview
+
+
+---
 
 ## 🚀 Features
 
