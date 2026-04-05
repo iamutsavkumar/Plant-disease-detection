@@ -5,6 +5,8 @@ An AI-powered web application that detects plant leaf diseases using a Convoluti
 ---
 ## 📸 UI Preview
 
+![Upload Page](assets/upload.png)
+![Prediction Result](assets/result.png)
 
 ---
 
