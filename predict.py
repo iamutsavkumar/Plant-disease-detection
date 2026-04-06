@@ -54,7 +54,6 @@ def load_resources():
     print("✅ Model and class indices loaded!")
     return model, class_indices
 
-
 def preprocess_image(image_path):
     """Load and preprocess a single image for prediction."""
     if not os.path.exists(image_path):
@@ -67,7 +66,6 @@ def preprocess_image(image_path):
     img_array = img_array / 255.0       # Normalize pixel values
     img_array = np.expand_dims(img_array, axis=0)  # Shape: (1, 128, 128, 3)
     return img_array
-
 
 def predict(image_path, model, class_indices):
     """Run prediction on the given image."""
