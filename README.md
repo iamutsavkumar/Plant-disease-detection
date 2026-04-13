@@ -1,29 +1,29 @@
-# 🌿 Plant Disease Detection System
+#  Plant Disease Detection System
 
 An AI-powered web application that detects plant leaf diseases using a Convolutional Neural Network (CNN). The system allows users to upload leaf images and get instant predictions with confidence scores.
 
 ---
-## 📸 UI Preview
+##  UI Preview
 
 ![Upload Page](assets/upload.png)
 ![Prediction Result](assets/result.png)
 
 ---
 
-## 🚀 Features
+##  Features
 
-* 📷 Upload leaf images through web interface
-* 🤖 Detect diseases:
+*  Upload leaf images through web interface
+*  Detect diseases:
 
   * Healthy
   * Early Blight
   * Late Blight
-* 📊 Displays prediction confidence
-* 🌐 Interactive web app built with Flask
+*  Displays prediction confidence
+*  Interactive web app built with Flask
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 * Python
 * TensorFlow / Keras
@@ -33,7 +33,7 @@ An AI-powered web application that detects plant leaf diseases using a Convoluti
 
 ---
 
-## 📊 Model Details
+##  Model Details
 
 * Convolutional Neural Network (CNN)
 * Trained on the **PlantVillage dataset**
@@ -41,7 +41,7 @@ An AI-powered web application that detects plant leaf diseases using a Convoluti
 
 ---
 
-## ▶️ How to Run Locally
+##  How to Run Locally
 
 ```bash
 pip install -r requirements.txt
@@ -54,7 +54,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── app.py
@@ -68,7 +68,7 @@ http://127.0.0.1:5000
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 * Works best on dataset-like images
 * Accuracy may drop for real-world images due to:
@@ -79,19 +79,19 @@ http://127.0.0.1:5000
 
 ---
 
-## 📚 Dataset
+##  Dataset
 
 PlantVillage Dataset (available on Kaggle)
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Utsav Kumar**
 
 ---
 
-## ⭐ Acknowledgements
+##  Acknowledgements
 
 * PlantVillage Dataset
 * TensorFlow & Keras community
