@@ -1,4 +1,4 @@
-# 🌿 PlantMD — AI Plant Disease Detection
+# PlantMD — AI Plant Disease Detection
 
 PlantMD is a full-stack web application that uses a MobileNetV2-based deep learning model to detect diseases across 38 plant-disease classes from the [PlantVillage dataset](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset).
 
@@ -46,7 +46,7 @@ plantmd/
 
 ---
 
-## 🚀 Quick Start (Local Development)
+## Quick Start (Local Development)
 
 ### Prerequisites
 - Node.js ≥ 18
@@ -123,7 +123,7 @@ Open **http://localhost:3000** in your browser.
 
 ---
 
-## 🐳 Docker (Production)
+## Docker (Production)
 
 ```bash
 docker-compose up --build
@@ -159,7 +159,7 @@ Services:
 
 ---
 
-## 🌱 Model
+## Model
 
 - **Architecture:** MobileNetV2 (ImageNet pre-trained) + custom classification head
 - **Dataset:** PlantVillage — 87,000 images across 38 classes
@@ -168,7 +168,7 @@ Services:
 
 ---
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 PlantMD is a research / educational tool. For critical agricultural decisions always consult a certified agronomist.
 
