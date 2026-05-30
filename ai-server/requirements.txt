@@ -1,0 +1,14 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pillow==10.3.0
+numpy==1.26.4
+python-multipart==0.0.9
+httpx==0.27.0
+
+# TensorFlow — comment out on machines without enough RAM / GPU
+# and the server will auto-fall-back to mock predictions.
+tensorflow==2.16.1
+
+# Optional: lighter CPU-only build (mutually exclusive with tensorflow above)
+# tensorflow-cpu==2.16.1
