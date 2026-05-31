@@ -10,7 +10,7 @@ import { downloadHtmlReport } from "../utils/report.js";
 // ─── Global Styles (injected once) ───────────────────────────────────────────
 const GlobalStyle = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -55,8 +55,8 @@ const GlobalStyle = () => (
       --radius-xl: 28px;
 
       --font-display: 'Syne', sans-serif;
+      --font-body:    'Inter', sans-serif;
       --font-mono:    'Space Mono', monospace;
-      --font-serif:   'Newsreader', Georgia, serif;
     }
 
     body {
@@ -244,7 +244,7 @@ const ResultCard = ({ icon, title, items, accent }) => (
       {items.map((item, i) => (
         <li key={i} style={{ display:"flex", gap:10, fontSize:13, color:"var(--text-primary)", lineHeight:1.6 }}>
           <span style={{ color:`rgb(${accent})`, marginTop:3, flexShrink:0, fontSize:8 }}>◆</span>
-          <span style={{ fontFamily:"var(--font-serif)", fontStyle:"italic" }}>{item}</span>
+          <span style={{ fontFamily:"var(--font-body)", fontWeight:500 }}>{item}</span>
         </li>
       ))}
     </ul>
@@ -455,6 +455,79 @@ export default function PlantDiseaseDetector() {
 
         {/* ── MAIN ────────────────────────────────────────────────────────── */}
         <main style={{ maxWidth:880, margin:"0 auto", padding:"0 20px 100px" }}>
+
+          {/* Supported Crops */}
+          <div className="glass" style={{
+            borderRadius:"var(--radius-lg)",
+            padding:"20px",
+            marginBottom:"20px"
+          }}>
+            <h3 style={{
+              marginBottom:"12px",
+              color:"var(--green-bright)",
+              fontSize:"16px",
+              fontWeight:"700"
+            }}>
+              Supported Crops
+            </h3>
+
+            <p style={{
+              color:"var(--text-secondary)",
+              marginBottom:"12px"
+            }}>
+              This AI model was trained on 14 crop types and 38 disease classes.
+            </p>
+
+            <div style={{
+              display:"flex",
+              flexWrap:"wrap",
+              gap:"8px"
+            }}>
+              {[
+                "Apple","Blueberry","Cherry","Corn",
+                "Grape","Orange","Peach","Pepper Bell",
+                "Potato","Raspberry","Soybean",
+                "Squash","Strawberry","Tomato"
+              ].map(crop => (
+                <span
+                  key={crop}
+                  style={{
+                    padding:"8px 14px",
+                    borderRadius:"999px",
+                    background:"rgba(61,220,132,0.08)",
+                    border:"1px solid rgba(61,220,132,0.2)",
+                    fontSize:"13px",
+                    fontWeight:"600"
+                  }}
+                >
+                  {crop}
+                </span>
+              ))}
+            </div>
+
+            <p style={{
+              marginTop:"12px",
+              fontSize:"12px",
+              color:"#f59e0b"
+            }}>
+              ⚠ Uploading plants outside the supported crop list may produce inaccurate predictions.
+            </p>
+
+            <div style={{
+              marginTop:"14px",
+              display:"flex",
+              gap:"16px",
+              flexWrap:"wrap",
+              fontSize:"12px",
+              color:"var(--text-secondary)"
+            }}>
+              <span>Supported Crops: 14</span>
+              <span>Disease Classes: 38</span>
+              <span>Validation Accuracy: 90.4%</span>
+            </div>
+          </div>
+
+          
 
           {/* Upload Panel */}
           <div style={{ display:"grid", gridTemplateColumns:"1fr auto", gap:14, marginBottom:20, alignItems:"start" }}>
@@ -687,7 +760,7 @@ export default function PlantDiseaseDetector() {
 
                 {result.additionalNotes && (
                   <p style={{
-                    marginTop:20, fontFamily:"var(--font-serif)", fontStyle:"italic",
+                    marginTop:20, fontFamily:"var(--font-body)",
                     fontSize:14, color:"var(--text-secondary)", lineHeight:1.7,
                     borderTop:"1px solid var(--border-subtle)", paddingTop:16,
                   }}>
@@ -755,10 +828,10 @@ export default function PlantDiseaseDetector() {
           {!image && !cameraActive && (
             <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(195px, 1fr))", gap:12, marginTop:8 }}>
               {[
-                { icon:"🌾", label:"Wheat & Corn",   desc:"Rust · Blight · Smut" },
-                { icon:"🍅", label:"Tomatoes",        desc:"Early Blight · Mosaic" },
-                { icon:"🍇", label:"Grapes & Fruit",  desc:"Powdery Mildew · Rot" },
-                { icon:"🌿", label:"Leafy Crops",     desc:"Downy Mildew · Spots" },
+                { icon:"🍎", label:"Apple", desc:"Scab · Black Rot · Cedar Rust" },
+                { icon:"🍅", label:"Tomato", desc:"10 disease classes" },
+                { icon:"🍇", label:"Grape", desc:"Black Rot · Esca · Leaf Blight" },
+                { icon:"🥔", label:"Potato", desc:"Early Blight · Late Blight" },
               ].map(({ icon, label, desc }) => (
                 <div
                   key={label}
@@ -789,7 +862,7 @@ export default function PlantDiseaseDetector() {
             Plant<span style={{ color:"var(--green-bright)" }}>MD</span>
           </span>
         </div>
-        <p style={{ fontFamily:"var(--font-mono)", fontSize:10, letterSpacing:"0.06em", color:"var(--text-dim)", lineHeight:1.8 }}>
+        <p style={{ fontFamily:"var(--font-body)", fontSize:10, letterSpacing:"0.06em", color:"var(--text-dim)", lineHeight:1.8 }}>
           AI-POWERED PLANT DISEASE DETECTION<br/>
           FOR CRITICAL AGRICULTURAL DECISIONS, CONSULT A CERTIFIED AGRONOMIST.
         </p>
