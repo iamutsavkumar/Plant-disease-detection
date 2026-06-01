@@ -4,6 +4,12 @@ PlantMD is a full-stack web application that uses a MobileNetV2-based deep learn
 
 ---
 
+## UI Preview
+
+![UI Preview](assets/ui.png)
+
+---
+
 ## 🗂 Project Structure
 
 ```
