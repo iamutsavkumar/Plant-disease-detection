@@ -169,12 +169,13 @@ app.get("/api/history/:id", (req, res) => {
 });
 
 /** Serve React build in production */
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/build")));
-  app.get("*", (_req, res) =>
-    res.sendFile(path.join(__dirname, "../frontend/build/index.html"))
-  );
-}
+app.get("/", (_req, res) => {
+  res.json({
+    status: "ok",
+    service: "PlantMD Backend",
+    ai_server: AI_SERVER
+  });
+});
 
 // ── Error handler ─────────────────────────────────────────────────────────────
 app.use((err, _req, res, _next) => {
