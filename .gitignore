@@ -26,7 +26,6 @@ build/
 .env.development
 
 # ── ML Artifacts ─────────────────────────────────────────────────────────────
-ai-server/model/*.keras
 ai-server/model/*.h5
 ai-server/model/*.tflite
 ai-server/logs/
