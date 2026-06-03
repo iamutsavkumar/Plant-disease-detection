@@ -4,6 +4,12 @@ PlantMD is a full-stack web application that uses a MobileNetV2-based deep learn
 
 ---
 
+## Live Demo
+
+**Try the app here:** [https://utsav-kumar-link.render.app](https://plantmd.utsavkumar.online/)
+
+---
+
 ## UI Preview
 
 ![UI Preview](assets/ui.png)
